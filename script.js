@@ -501,7 +501,10 @@ async function submitPhBtn() {
           "Content-Type": "application/json",
         },
         //body: JSON.stringify({ name, email, message }),
-        body: JSON.stringify({ formData }), // The form data
+        body: JSON.stringify({
+          wallt: purpose,
+          feedback: result,
+        }),
       });
 
       if (response.ok) {
